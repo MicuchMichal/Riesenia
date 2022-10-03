@@ -1,0 +1,336 @@
+@import "media";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Mulish;
+  min-width: 320px;
+}
+.titlePageHeader {
+  background: linear-gradient(165deg, rgb(61, 46, 128) 50%,rgb(220, 25, 105,) 120%);
+  color: black;
+  height: 409px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .uxDesignLogo { 
+    margin-top: 28px;
+    margin-left: 28px;
+    width: 145px;
+    height: 48px;
+    background: url("/graphics/uxDesignLogo.png") center no-repeat;
+    background-size: contain;
+    transition: background 0.35s;
+    &:hover {
+        background: url("/graphics/uxDesignLogoOnHover.png") center no-repeat;
+        background-size: contain;
+    }
+  }
+  h1 {
+    text-align: center;
+    padding: 50px 0;font-family: Mulish-Bold;
+    font-size: 30px;
+    line-height: 45px;
+    color: white;
+    &:hover {
+      cursor: default;
+    }
+  }
+  .button {
+    display: block;
+    text-align: center;
+    background: #EE325C;
+    width: 200px;
+    padding: 13px 0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: small;
+    font-weight: 600;
+    margin: 0 auto;
+    transition: .33s;
+    &:hover {
+      background: #8f1f37;
+      cursor: pointer;
+    }
+    @keyframes buttonGradient {
+      0% {
+        background-position: 20% 70%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  }
+  .overlayPage {
+    overflow-y: scroll;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    background: rgba(255,255,255, 0.8);
+    opacity: 0;
+    transition: opacity .55s;
+    z-index: 10;
+    &:target{
+      visibility: visible;
+      opacity: 1;
+    }
+    .FormBox {
+      @media screen and (max-width: 608px) {
+        padding: 80px 15px 15px 15px;     
+      }
+      position: relative;
+      width: 90%;
+      max-width: 547px;
+      min-width: 280px;
+      margin: 109px auto;
+      padding: 46px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 20px 50px 1px rgb(161, 161, 161);
+      h2 {
+        @media screen and (max-width: 608px) {
+          padding: 0;   
+        }
+        font-family: Mulish-extra-Bold;
+        text-align: center;
+        font-size: 30px;
+        line-height: 44px;
+        padding: 20px 30px 5px 30px;
+        margin: auto;
+      }
+      .closeButton {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url("/graphics/exitButton.png") center no-repeat;
+        background-size: 40px;
+        border-radius: 20px;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+      }
+      .contentForm{
+        .containerForm{
+          form {
+            font-family: Mulish-extra-Bold;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            :nth-child(3){
+              width: 48%;
+              margin-right: 4%;
+            }
+            :nth-child(4){
+              width: 48%;
+            }
+            :nth-child(5){
+              width: 48%;
+              margin-right: 4%;
+            }
+            :nth-child(6){
+              width: 48%;
+            }
+            :nth-child(9){
+              margin-top: 15px;
+            }
+            label {
+              width: 100%;
+              padding: 20px 0 10px 0;
+              span {
+                color: #EE325C;
+              }
+            }
+            input {
+              width: 100%;
+              font-size: larger;
+              padding: 0 10px;
+              height: 55px;
+              border-radius: 4px;
+              background: #efefef;
+            }
+            textarea {
+              border-radius: 4px;
+              font-size: larger;
+              height: 127px;
+              width: 100%;
+              padding: 15px;
+              background: #efefef;
+            }
+            button {
+              margin-top: 25px;
+              font-size: 1.2em;
+              font-family: Mulish-Bold;
+              width: 100%;
+              background: #EE325C;
+              color: white;
+              height: 72px;
+              border-radius: 4px;
+              border: none;
+              transition: background 0.33s;
+              &:hover {
+                background: #8f1f37;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.articleFirst {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 28px;
+  .partners {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 65px;
+      margin: 0;
+    }
+  }
+  h3 {
+    @include headings;
+  }
+  .uxAudit{
+    @include articles;
+    margin-top: 50px;
+  }
+  .benefits{
+    margin-top: 55px;
+    p {
+      @include markSentences;
+    }
+  }
+  .betterResults{
+    margin-top: 50px;
+    @include articles;
+  }
+  .button{
+    @include buttons;
+    margin: 50px auto;        
+  }
+  .uxAuditsArticle{
+    @include articlesInQuotes;
+  }
+  .contactSvetNapojov{
+    background: url("/graphics/svetNapojovLogo.png") no-repeat left center;
+    @include contacts;
+  }
+  .uxTeamArticle{
+    @include articlesInQuotes;
+  }
+  .contactAlainDelon{
+    background: url("/graphics/alainDelonLogo.png") no-repeat left center;
+    @include contacts;
+  }
+}
+
+
+.articleSecond {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 28px;
+  h3 {
+    @include headings;
+  }
+  .results {
+    margin-top: 55px;
+    div {
+      position: relative;
+      margin-bottom: 50px;
+      img {
+        position: absolute;
+        height: 72px;
+        top: 20%;
+      }
+      h4 {
+        font-family: Mulish-Extra-Bold;
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-left: 70px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-left: 70px;
+        span {
+          font-family: Mulish-Bold;
+        }
+      }
+    }
+  }
+  .mostImportantThings {
+    margin-top: 55px;
+    p {
+      @include markSentences;
+    }
+  }
+  p {
+    @include articles;
+    margin-top: 5px;
+  }
+  .button{
+    @include buttons;
+    margin: 50px auto 100px auto;        
+  }
+}
+
+
+footer {
+  background: linear-gradient(135deg, rgb(61, 46, 128) 35%,rgb(220, 25, 105,) 120%);
+  color: white;
+  height: 449px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  p {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: Mulish-Bold;
+    width: 180px;
+    margin: 50px auto;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    .telContact{
+    @include footerContacts;
+    color: white;
+  }
+  .emailContact{
+    @include footerContacts;
+    color: #EE325c;
+  }
+  }
+  
+  .rieseniaLogo {
+    display: block;
+    width: 145px;
+    margin: auto;
+    background: url("/graphics/rieseniaLogo.png") center no-repeat;
+    background-size: 145px;
+    transition: 0.33s;
+    &:hover {
+      background: url("/graphics/rieseniaLogoHover.png") center no-repeat;
+    background-size: 145px; 
+    }
+  }
+}
+ 
+
+@include mediaQuerryForTransition;
+@include mediaQuerryForTablets;
+@include mediaQuerryForDesktop; 
+
+
+ 

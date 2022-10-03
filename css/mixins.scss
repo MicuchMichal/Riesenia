@@ -1,0 +1,99 @@
+@import "fonts";
+
+@mixin headings {
+  font-size: 32px;
+  font-family: Mulish-bold;
+  margin-top: 50px;
+  span {
+    display: inline-block;
+    border-bottom: 14px solid #fcd6de;
+    height: 50px;
+  }
+}
+@mixin articles {
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  strong {
+    display: inline;
+    font-family: Mulish-extra-Bold;
+    font-weight: 900;
+  }
+}
+@mixin articlesInQuotes {
+  position: relative;
+  line-height: 32px;
+  font-size: 16px;
+  border: 1px solid #d6d8dd;
+  padding: 33px 23px;
+  margin-top: 40px;
+  img {
+    width: 43px;
+    height: 36px;
+    position: absolute;
+    top: -25px;
+  }
+  a {
+    text-decoration: none;
+    color: #EE325C;
+    font-family: Mulish-Bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@mixin contacts {
+  background-size: 64px;
+  padding: 45px 0 45px 80px;
+  font-size: 16px;
+  strong {
+    font-family: Mulish-Extra-Bold;
+  }
+  a {
+    text-decoration: none;
+    color: #EE325C;
+    font-family: Mulish-Bold;
+  }
+}
+@mixin buttons {
+    font-size: 1.3em;
+    font-family: Mulish-Bold;
+    width: 100%;
+    max-width: 323px;
+    text-align: center;
+    background: #EE325C;
+    color: white;
+    text-decoration: none;
+    padding: 23px 0;
+    border-radius: 8px;
+    transition: background 0.33s;
+    &:hover {
+      background: #8f1f37;
+      cursor: pointer;
+    }  
+}
+@mixin markSentences {
+  background: url("/graphics/benefitMarker.png") no-repeat top 3px left 3px;
+  background-size: 25px;
+  padding: 0 45px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 82px;
+  line-height: 28px;
+}
+@mixin footerContacts {
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 22px;
+  width: fit-content;
+  margin: 0 auto;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@mixin resetProperties {
+  margin: 0;
+  padding: 0;
+  width: 440px;
+  position: relative;
+}

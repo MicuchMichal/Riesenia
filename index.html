@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UX Design</title>
+    <link rel="shortcut icon" href="graphics/titleLogo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" href="js/script.js"></script>
+  </head>
+  <body>
+    <header class="titlePageHeader">
+      <a href="#" class="uxDesignLogo"></a>
+      <h1>Zvýšte svoje<br>zisky optimalizáciou<br>vášho eshopu.</h1>
+      <a href="#divForm" class="button">Mám záujem o UX audit</a>
+      
+      <div class="overlayPage" id="divForm">
+        <div class="FormBox">
+          <h2>Jednoducho nám napíšte a my sa vám ozveme.</h2>
+          <a href="#" class="closeButton"></a>
+          <div class="contentForm">
+            <div class="containerForm">
+              <form onSubmit="if(!confirm('Úspešne odoslané')){return false;}">
+                <label for="name">Meno: <span>*</span></label>
+                <input type="text" id="name" name="name" pattern="[A-Zaz]{a,32}" required>
+                <label for="email">E-mail: <span>*</span></label>
+                <label for="phone">Tel. číslo:</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+                <label for="">Webstránka:</label>
+                <input type="text">
+                <label for="">Poznámka:</label>
+                <textarea placeholder="Je niečo čo by ste sa nás chceli spýtat?"></textarea>
+                <button type="submit" onclick="Formular();">Kontaktujte ma</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <article class="articleFirst">
+        <div class="partners">
+          <img src="graphics/googlePartner.png" alt="google partner">
+          <img src="graphics/admaMember.png" alt="member of adma">
+        </div>
+        <h3>Rýchle <span>výsledky</span> pomocou UX auditu.</h3>
+        <p class="uxAudit">UX auditom vášho riešenia lepšie pochopíte, ako vaši zákazníci používajú váš produkt, <strong>zvýšite ich spokojnosť a hlavne vaše zisky.</strong></p>
+        <div class="benefits">
+          <p>Odhalíme nedostatky na vašej stránke</p>
+          <p>Zvýšime konverzný pomer vašich stránok</p>
+          <p>Zvýšime výkon marketingových kampaní</p>
+          <p>Znížime vaše náklady na vývoj</p>
+          <p>Zvýšime návštevnosť vašich stránok</p>
+        </div>
+        <p class="betterResults">Dosiahnite lepšie výsledky vašej webstránky alebo e-shopu <strong>pomocou UX auditu.</strong></p>
+          <a href="#divForm" class="button">Mám záujem o UX audit</a>
+        <p class="uxAuditsArticle"><img src="graphics/quotationMarks.png" alt="quotes">Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu … <a href="#">čítať viac</a> </p>
+        <div class="contactSvetNapojov">
+          <strong>Jozef Korman</strong> 
+          <p>Konateľ <a href="#">SvetNápojov.sk</a></p>
+        </div>
+        <p class="uxTeamArticle"><img src="graphics/quotationMarks.png" alt="quotes"> S UX tímom Riešení úzko spolupracujeme už dlhé roky a sú dôležitým partnerom nášho biznisu. Vďaka ich know-how pre nás od samého začatku správne nastavili zdravý pomer prvotriedneho dizajnu a funkčnosti webu, ktorý následne vylepšovali pomocou relevantných analýz a dát. Aj ich zásluhou … <a href="#">čítať viac</a></p>
+        <div class="contactAlainDelon">
+          <strong>Richard Wohlstein</strong>
+          <p>Retail manager <a href="#">AlainDelon.sk</a></p>
+        </div>
+      </article>
+
+      <article class="articleSecond">
+        <h3 class="firstH3">Rýchla a jednoduchá cesta k <span>výsledkom.</span></h3>
+        <div class="results">
+          <div>
+            <img src="graphics/numberOne.png" alt="po prve">
+            <h4>Ciele auditu</h4>
+            <p>Určíme si spoločné ciele, nastavíme očakávania a definujeme <span>cieľovú skupinu a jej potreby.</span></p>
+          </div>
+          <div>
+            <img src="graphics/numberTwo.png" alt="po druhe">
+            <h4>Zbieranie dát</h4>
+            <p>Zvolíme vhodné metodiky a nástroje na <span>sledovanie správania používateľov a zbieranie dát.</span></p>  
+          </div>
+          <div>
+            <img src="graphics/numberThree.png" alt="po tretie">
+            <h4>Vyhodnotenie</h4>
+            <p><span>Vyhodnotíme nazbierané dáta,</span> zosumarizujeme všetky naše zistenia a <span>navrhneme riešenia.</span></p>
+          </div>
+          <div>
+            <img src="graphics/numberFour.png" alt="po stvrte">
+            <h4>Výsledky auditu</h4>
+            <p><span>Osobná prezentácia výsledkov a navrhnutých riešení</span> s podrobnou dokumentáciou.</p>
+          </div>
+        </div>
+        <h3 class="secondH3">Zameriame sa na to <span>najdôležitejšie.</span></h3>
+        <div class="mostImportantThings">
+          <p>Informačnú architektúru a štruktúru kategórií</p>
+          <p>Správanie návštevníkov na kľúčových stránkach</p>
+          <p>Rýchlosť a dostupnosť stránok, SEO nastavenia</p>
+          <p>Váš biznis a vašich zákazníkov</p>
+          <p>Ciele, ktoré chcete dosiahnuť</p>
+          <p>Webovú analytiku</p>
+        </div>
+        <p>Dosiahnite lepšie výsledky vašej webstránky alebo e-shopu <strong>pomocou UX auditu.</strong></p>
+        <a href="#divForm" class="button">Mám záujem o UX audit</a>  
+      </article>
+    </section>
+
+    <footer>
+      <p>Máte otázky? Jednoducho sa spýtajte.</p>
+      <div>
+        <a href="#" class="telContact">+421 (02) 555 65 726</a>
+        <a href="#" class="emailContact">uxdesign@riesenia.com</a>
+      </div>
+      <a href="#divForm" class="rieseniaLogo"><p></p></a>
+    </footer>
+  </body>
+
+
+
+</html>

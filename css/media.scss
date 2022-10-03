@@ -1,0 +1,383 @@
+@import "mixins";
+
+@mixin mediaQuerryForTransition {
+  @media screen and (min-width: 481px) {
+    .articleFirst {
+      padding-left: 6%;
+      padding-right: 6%;
+      position: relative;
+      h3 {
+        width: 380px;
+        margin:50px auto 0 auto;
+        text-align: center; 
+      }
+      .uxAudit {
+        max-width: 500px;
+      }
+      .benefits {
+        align-self: center;
+      }
+      .betterResults {
+        max-width: 500px;
+      }
+      .button {
+        width: 55%;
+      }
+      .uxAuditsArticle {
+        max-width: 500px;
+        align-self: flex-end;
+      }
+      .contactSvetNapojov {
+        align-self: flex-end;
+        text-align: end;
+        padding-right: 80px;
+        background-position: right;
+      }
+      .uxTeamArticle {
+        max-width: 500px;
+      }
+    }
+    .articleSecond {
+      h3 {
+        max-width: 380px;
+        margin:50px auto 0 auto;
+        text-align: center; 
+      }
+      .results {
+        max-width: 500px;
+        align-self: center
+      }
+      .mostImportantThings {
+        align-self: center;
+      }
+      p {
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@mixin mediaQuerryForTablets {
+  @media screen and (min-width: 768px) {
+    .articleFirst {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .partners{
+        order: 1;
+        width: 100%;
+        text-align: center;
+      }
+      h3 {
+        order: 2;
+        font-size: 2.3em;
+        min-width: 400px;
+      }
+      .uxAudit {
+        order: 3;
+      }
+      .benefits {
+        order: 4;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+      }
+      .betterResults {
+        order: 5;
+      }
+      .button {
+        order: 6;
+        max-width: 600px;
+      }
+      .uxAuditsArticle {
+        order: 7;
+        width: 45%;
+        margin-right: 2.5%;
+        height: 420px;
+        @media screen and (min-width: 909px) {
+          height: 330px;
+        }
+      }
+      .contactSvetNapojov {
+        order: 9;
+        width: 50%;
+        background-position: left;
+        strong {
+          display: block;
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      .uxTeamArticle {
+        order: 8;
+        width: 45%; 
+        margin-left: 2.5%;
+        height: 420px;
+        @media screen and (min-width: 909px) {
+          height: 330px;
+        }
+      }
+      .contactAlainDelon {
+        order: 10;
+        width: 50%;
+      }
+    }
+  }  
+}
+
+@mixin mediaQuerryForDesktop {
+  @media screen and (min-width: 1040px) {
+    .titlePageHeader {
+      height: 554px;
+      background: linear-gradient(165deg, rgb(61, 46, 128) 35%,rgb(220, 25, 105,) 120%);
+      .uxDesignLogo {
+        position: absolute;
+        right: 70%;
+        top: 50px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 80px; 
+        margin-top: 120px;
+      }
+      .button {
+        position: absolute;
+        left: 70%;
+        top: 50px;
+      }
+    }
+    .articleFirst {
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 80px;
+      margin: 0 auto;
+      max-width: 1244px;
+      >:nth-child(n){
+        @include resetProperties;
+      }
+      .partners{
+        order: 2;
+        justify-content: flex-start;
+        top: 20px;
+        left: 40px;
+        img {
+          width: 185px;
+          height: 80px;
+          margin-right: 20px;
+        }
+      }
+      h3 {
+        order: 1;
+        text-align: left;
+        font-size: 48px;
+        line-height: 64px;
+        right: 40px;
+        span {
+          height: 65px;
+        }
+      }
+      .uxAudit {
+        order: 3;
+        font-size: 22px;
+        line-height: 40px;
+        margin-top: 50px;
+        right: 40px;
+      }
+      .benefits {
+        order: 4;
+        margin-top: 35px;
+        top: -60px;
+        left: 40px;
+        p {
+          height: 50px;
+          text-align: left;
+        }
+      }
+      .betterResults {
+        order: 5;
+        right: 70px;
+        margin-top: 40px;
+        width: 460px;
+      }
+      .button {
+        order: 6;
+        width: 380px;
+        margin-top: 40px;
+        height: 72px;
+        padding: 20px;
+        left: 18px;
+      }
+      .uxAuditsArticle {
+        order: 7;
+        padding: 20px;
+        width: 420px;
+        margin-top: 150px;
+        right: 60px;
+        height: 270px;
+      }
+      .contactSvetNapojov {
+        order: 9;
+        padding: 30px 0 30px 85px;
+        right: 40px;
+        margin-top: 20px;
+      }
+      .uxTeamArticle {
+        order: 8;
+        padding: 20px;
+        width: 420px;
+        margin-top: 150px;
+        left: 46px;
+        height: 270px;
+      }
+      .contactAlainDelon {
+        order: 10;
+        padding: 30px 0 30px 85px;
+        left: 45px;
+        margin-top: 20px;
+      }
+    }
+    .articleSecond {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      margin: 0 auto;
+      max-width: 1244px;
+      >:nth-child(n){
+        @include resetProperties;
+        max-width: none;
+      }
+      .firstH3 {
+        order: 1;
+        font-size: 48px;
+        line-height: 64px;
+        max-width: none;
+        width: 600px;
+        display: block;
+        span {
+          height: 70px;
+        }
+      }
+      .results {
+        order: 2;
+        margin-top: 120px;
+        width: 100%;
+        max-width: none;
+        div {
+          max-width: none;
+        }
+        h4 {
+          position: relative;
+          left: 10px;
+          top: 15px;
+        }
+        p{
+          width: 400px;
+          left: 10px;
+          top: 10px;
+        }
+        >:nth-child(odd){
+          margin: 0 auto 20px auto;
+          width: 555px;
+          height: 130px;
+          right: 150px;
+          padding-right: 120px;
+          background: url("/graphics/arrowRight.png") right top 55px no-repeat;
+        }
+        >:nth-child(even){
+          width: 570px;
+          margin: 0 auto 20px auto;
+          height: 130px;
+          left: 185px;
+          padding-left: 100px;
+          background: url("/graphics/arrowLeft.png") left top 65px no-repeat;
+        }
+        >:nth-child(4){
+          background: none;
+        }
+      }
+      .secondH3{
+        order: 3;
+        font-size: 48px;
+        line-height: 64px;
+        width: 950px;
+        padding-right: 350px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        text-align: left;
+        span {
+          height: 70px;
+        }
+      }
+      .mostImportantThings {
+        order: 5;
+        top: -50px;
+        p {
+          font-size: 18px;
+          line-height: 27px;
+          width: 500px;
+          height: 47px;
+          position: relative;
+          left: 40px;
+        }
+      }
+      p {
+        order: 4;
+        line-height: 40px;
+        font-size: 26px;
+        width: 300px;
+        position: relative;
+        right: 35px;
+        top: 40px;
+      }
+      .button {
+        order: 6;
+        position: relative;
+        right: 285px;
+        top: -100px;
+        min-width: none;
+        display: block;
+        padding: 23px 0;
+        width: 380px;
+      }
+    }
+    footer {
+      margin-top: 100px;
+      height: 721px;
+      p {
+        font-size: 48px;
+        line-height: 59px;
+        width: 600px;
+        margin-top: 140px;
+        margin-bottom: 120px;
+      }
+      div {
+        flex-direction: row;
+        justify-content: center;
+        .telContact {
+          font-size: 30px;
+          line-height: 40px;
+          margin: 0;
+          margin-right: 40px;
+        }
+        .emailContact {
+          font-size: 30px;
+          line-height: 40px;
+          margin: 0;
+        }
+      }
+      .rieseniaLogo {
+        background-size: 275px;
+        width: 275px;
+        &:hover {
+          background-size: 275px;
+        }
+      }
+    }
+  }  
+}
+
+
+

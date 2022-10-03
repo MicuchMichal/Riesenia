@@ -1,0 +1,873 @@
+@font-face {
+  font-family: Mulish;
+  src: url(fonts/Mulish/Mulish-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Mulish-Bold;
+  src: url(fonts/Mulish/static/Mulish-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Mulish-extra-Bold;
+  src: url(fonts/Mulish/static/Mulish-Black.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mulish;
+  min-width: 320px;
+}
+
+.titlePageHeader {
+  background: linear-gradient(165deg, #3d2e80 50%, #dc1969 120%);
+  color: black;
+  height: 409px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.titlePageHeader .uxDesignLogo {
+  margin-top: 28px;
+  margin-left: 28px;
+  width: 145px;
+  height: 48px;
+  background: url("/graphics/uxDesignLogo.png") center no-repeat;
+  background-size: contain;
+  transition: background 0.35s;
+}
+.titlePageHeader .uxDesignLogo:hover {
+  background: url("/graphics/uxDesignLogoOnHover.png") center no-repeat;
+  background-size: contain;
+}
+.titlePageHeader h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-family: Mulish-Bold;
+  font-size: 30px;
+  line-height: 45px;
+  color: white;
+}
+.titlePageHeader h1:hover {
+  cursor: default;
+}
+.titlePageHeader .button {
+  display: block;
+  text-align: center;
+  background: #EE325C;
+  width: 200px;
+  padding: 13px 0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: small;
+  font-weight: 600;
+  margin: 0 auto;
+  transition: 0.33s;
+}
+.titlePageHeader .button:hover {
+  background: #8f1f37;
+  cursor: pointer;
+}
+@keyframes buttonGradient {
+  0% {
+    background-position: 20% 70%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.titlePageHeader .overlayPage {
+  overflow-y: scroll;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.5s;
+  visibility: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.55s;
+  z-index: 10;
+}
+.titlePageHeader .overlayPage:target {
+  visibility: visible;
+  opacity: 1;
+}
+.titlePageHeader .overlayPage .FormBox {
+  position: relative;
+  width: 90%;
+  max-width: 547px;
+  min-width: 280px;
+  margin: 109px auto;
+  padding: 46px;
+  background: white;
+  box-shadow: 0px 20px 50px 1px #a1a1a1;
+}
+@media screen and (max-width: 608px) {
+  .titlePageHeader .overlayPage .FormBox {
+    padding: 80px 15px 15px 15px;
+  }
+}
+.titlePageHeader .overlayPage .FormBox h2 {
+  font-family: Mulish-extra-Bold;
+  text-align: center;
+  font-size: 30px;
+  line-height: 44px;
+  padding: 20px 30px 5px 30px;
+  margin: auto;
+}
+@media screen and (max-width: 608px) {
+  .titlePageHeader .overlayPage .FormBox h2 {
+    padding: 0;
+  }
+}
+.titlePageHeader .overlayPage .FormBox .closeButton {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/graphics/exitButton.png") center no-repeat;
+  background-size: 40px;
+  border-radius: 20px;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form {
+  font-family: Mulish-extra-Bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form :nth-child(3) {
+  width: 48%;
+  margin-right: 4%;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form :nth-child(4) {
+  width: 48%;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form :nth-child(5) {
+  width: 48%;
+  margin-right: 4%;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form :nth-child(6) {
+  width: 48%;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form :nth-child(9) {
+  margin-top: 15px;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form label {
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form label span {
+  color: #EE325C;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form input {
+  width: 100%;
+  font-size: larger;
+  padding: 0 10px;
+  height: 55px;
+  border-radius: 4px;
+  background: #efefef;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form textarea {
+  border-radius: 4px;
+  font-size: larger;
+  height: 127px;
+  width: 100%;
+  padding: 15px;
+  background: #efefef;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form button {
+  margin-top: 25px;
+  font-size: 1.2em;
+  font-family: Mulish-Bold;
+  width: 100%;
+  background: #EE325C;
+  color: white;
+  height: 72px;
+  border-radius: 4px;
+  border: none;
+  transition: background 0.33s;
+}
+.titlePageHeader .overlayPage .FormBox .contentForm .containerForm form button:hover {
+  background: #8f1f37;
+  cursor: pointer;
+}
+
+.articleFirst {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 28px;
+}
+.articleFirst .partners {
+  display: flex;
+  justify-content: center;
+}
+.articleFirst .partners img {
+  height: 65px;
+  margin: 0;
+}
+.articleFirst h3 {
+  font-size: 32px;
+  font-family: Mulish-bold;
+  margin-top: 50px;
+}
+.articleFirst h3 span {
+  display: inline-block;
+  border-bottom: 14px solid #fcd6de;
+  height: 50px;
+}
+.articleFirst .uxAudit {
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.articleFirst .uxAudit strong {
+  display: inline;
+  font-family: Mulish-extra-Bold;
+  font-weight: 900;
+}
+.articleFirst .benefits {
+  margin-top: 55px;
+}
+.articleFirst .benefits p {
+  background: url("/graphics/benefitMarker.png") no-repeat top 3px left 3px;
+  background-size: 25px;
+  padding: 0 45px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 82px;
+  line-height: 28px;
+}
+.articleFirst .betterResults {
+  margin-top: 50px;
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.articleFirst .betterResults strong {
+  display: inline;
+  font-family: Mulish-extra-Bold;
+  font-weight: 900;
+}
+.articleFirst .button {
+  font-size: 1.3em;
+  font-family: Mulish-Bold;
+  width: 100%;
+  max-width: 323px;
+  text-align: center;
+  background: #EE325C;
+  color: white;
+  text-decoration: none;
+  padding: 23px 0;
+  border-radius: 8px;
+  transition: background 0.33s;
+  margin: 50px auto;
+}
+.articleFirst .button:hover {
+  background: #8f1f37;
+  cursor: pointer;
+}
+.articleFirst .uxAuditsArticle {
+  position: relative;
+  line-height: 32px;
+  font-size: 16px;
+  border: 1px solid #d6d8dd;
+  padding: 33px 23px;
+  margin-top: 40px;
+}
+.articleFirst .uxAuditsArticle img {
+  width: 43px;
+  height: 36px;
+  position: absolute;
+  top: -25px;
+}
+.articleFirst .uxAuditsArticle a {
+  text-decoration: none;
+  color: #EE325C;
+  font-family: Mulish-Bold;
+}
+.articleFirst .uxAuditsArticle a:hover {
+  text-decoration: underline;
+}
+.articleFirst .contactSvetNapojov {
+  background: url("/graphics/svetNapojovLogo.png") no-repeat left center;
+  background-size: 64px;
+  padding: 45px 0 45px 80px;
+  font-size: 16px;
+}
+.articleFirst .contactSvetNapojov strong {
+  font-family: Mulish-Extra-Bold;
+}
+.articleFirst .contactSvetNapojov a {
+  text-decoration: none;
+  color: #EE325C;
+  font-family: Mulish-Bold;
+}
+.articleFirst .uxTeamArticle {
+  position: relative;
+  line-height: 32px;
+  font-size: 16px;
+  border: 1px solid #d6d8dd;
+  padding: 33px 23px;
+  margin-top: 40px;
+}
+.articleFirst .uxTeamArticle img {
+  width: 43px;
+  height: 36px;
+  position: absolute;
+  top: -25px;
+}
+.articleFirst .uxTeamArticle a {
+  text-decoration: none;
+  color: #EE325C;
+  font-family: Mulish-Bold;
+}
+.articleFirst .uxTeamArticle a:hover {
+  text-decoration: underline;
+}
+.articleFirst .contactAlainDelon {
+  background: url("/graphics/alainDelonLogo.png") no-repeat left center;
+  background-size: 64px;
+  padding: 45px 0 45px 80px;
+  font-size: 16px;
+}
+.articleFirst .contactAlainDelon strong {
+  font-family: Mulish-Extra-Bold;
+}
+.articleFirst .contactAlainDelon a {
+  text-decoration: none;
+  color: #EE325C;
+  font-family: Mulish-Bold;
+}
+
+.articleSecond {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 28px;
+}
+.articleSecond h3 {
+  font-size: 32px;
+  font-family: Mulish-bold;
+  margin-top: 50px;
+}
+.articleSecond h3 span {
+  display: inline-block;
+  border-bottom: 14px solid #fcd6de;
+  height: 50px;
+}
+.articleSecond .results {
+  margin-top: 55px;
+}
+.articleSecond .results div {
+  position: relative;
+  margin-bottom: 50px;
+}
+.articleSecond .results div img {
+  position: absolute;
+  height: 72px;
+  top: 20%;
+}
+.articleSecond .results div h4 {
+  font-family: Mulish-Extra-Bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+.articleSecond .results div p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-left: 70px;
+}
+.articleSecond .results div p span {
+  font-family: Mulish-Bold;
+}
+.articleSecond .mostImportantThings {
+  margin-top: 55px;
+}
+.articleSecond .mostImportantThings p {
+  background: url("/graphics/benefitMarker.png") no-repeat top 3px left 3px;
+  background-size: 25px;
+  padding: 0 45px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 82px;
+  line-height: 28px;
+}
+.articleSecond p {
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.articleSecond p strong {
+  display: inline;
+  font-family: Mulish-extra-Bold;
+  font-weight: 900;
+}
+.articleSecond .button {
+  font-size: 1.3em;
+  font-family: Mulish-Bold;
+  width: 100%;
+  max-width: 323px;
+  text-align: center;
+  background: #EE325C;
+  color: white;
+  text-decoration: none;
+  padding: 23px 0;
+  border-radius: 8px;
+  transition: background 0.33s;
+  margin: 50px auto 100px auto;
+}
+.articleSecond .button:hover {
+  background: #8f1f37;
+  cursor: pointer;
+}
+
+footer {
+  background: linear-gradient(135deg, #3d2e80 35%, #dc1969 120%);
+  color: white;
+  height: 449px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+footer p {
+  font-size: 24px;
+  line-height: 34px;
+  font-family: Mulish-Bold;
+  width: 180px;
+  margin: 50px auto;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+footer div .telContact {
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 22px;
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+}
+footer div .telContact:hover {
+  text-decoration: underline;
+}
+footer div .emailContact {
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 22px;
+  width: fit-content;
+  margin: 0 auto;
+  color: #EE325c;
+}
+footer div .emailContact:hover {
+  text-decoration: underline;
+}
+footer .rieseniaLogo {
+  display: block;
+  width: 145px;
+  margin: auto;
+  background: url("/graphics/rieseniaLogo.png") center no-repeat;
+  background-size: 145px;
+  transition: 0.33s;
+}
+footer .rieseniaLogo:hover {
+  background: url("/graphics/rieseniaLogoHover.png") center no-repeat;
+  background-size: 145px;
+}
+
+@media screen and (min-width: 481px) {
+  .articleFirst {
+    padding-left: 6%;
+    padding-right: 6%;
+    position: relative;
+  }
+  .articleFirst h3 {
+    width: 380px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+  .articleFirst .uxAudit {
+    max-width: 500px;
+  }
+  .articleFirst .benefits {
+    align-self: center;
+  }
+  .articleFirst .betterResults {
+    max-width: 500px;
+  }
+  .articleFirst .button {
+    width: 55%;
+  }
+  .articleFirst .uxAuditsArticle {
+    max-width: 500px;
+    align-self: flex-end;
+  }
+  .articleFirst .contactSvetNapojov {
+    align-self: flex-end;
+    text-align: end;
+    padding-right: 80px;
+    background-position: right;
+  }
+  .articleFirst .uxTeamArticle {
+    max-width: 500px;
+  }
+
+  .articleSecond h3 {
+    max-width: 380px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+  .articleSecond .results {
+    max-width: 500px;
+    align-self: center;
+  }
+  .articleSecond .mostImportantThings {
+    align-self: center;
+  }
+  .articleSecond p {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articleFirst {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .articleFirst .partners {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .articleFirst h3 {
+    order: 2;
+    font-size: 2.3em;
+    min-width: 400px;
+  }
+  .articleFirst .uxAudit {
+    order: 3;
+  }
+  .articleFirst .benefits {
+    order: 4;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .articleFirst .betterResults {
+    order: 5;
+  }
+  .articleFirst .button {
+    order: 6;
+    max-width: 600px;
+  }
+  .articleFirst .uxAuditsArticle {
+    order: 7;
+    width: 45%;
+    margin-right: 2.5%;
+    height: 420px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 909px) {
+  .articleFirst .uxAuditsArticle {
+    height: 330px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articleFirst .contactSvetNapojov {
+    order: 9;
+    width: 50%;
+    background-position: left;
+  }
+  .articleFirst .contactSvetNapojov strong {
+    display: block;
+    text-align: left;
+  }
+  .articleFirst .contactSvetNapojov p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articleFirst .uxTeamArticle {
+    order: 8;
+    width: 45%;
+    margin-left: 2.5%;
+    height: 420px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 909px) {
+  .articleFirst .uxTeamArticle {
+    height: 330px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articleFirst .contactAlainDelon {
+    order: 10;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .titlePageHeader {
+    height: 554px;
+    background: linear-gradient(165deg, #3d2e80 35%, #dc1969 120%);
+  }
+  .titlePageHeader .uxDesignLogo {
+    position: absolute;
+    right: 70%;
+    top: 50px;
+    margin: 0;
+  }
+  .titlePageHeader h1 {
+    font-size: 50px;
+    line-height: 80px;
+    margin-top: 120px;
+  }
+  .titlePageHeader .button {
+    position: absolute;
+    left: 70%;
+    top: 50px;
+  }
+
+  .articleFirst {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 80px;
+    margin: 0 auto;
+    max-width: 1244px;
+  }
+  .articleFirst > :nth-child(n) {
+    margin: 0;
+    padding: 0;
+    width: 440px;
+    position: relative;
+  }
+  .articleFirst .partners {
+    order: 2;
+    justify-content: flex-start;
+    top: 20px;
+    left: 40px;
+  }
+  .articleFirst .partners img {
+    width: 185px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  .articleFirst h3 {
+    order: 1;
+    text-align: left;
+    font-size: 48px;
+    line-height: 64px;
+    right: 40px;
+  }
+  .articleFirst h3 span {
+    height: 65px;
+  }
+  .articleFirst .uxAudit {
+    order: 3;
+    font-size: 22px;
+    line-height: 40px;
+    margin-top: 50px;
+    right: 40px;
+  }
+  .articleFirst .benefits {
+    order: 4;
+    margin-top: 35px;
+    top: -60px;
+    left: 40px;
+  }
+  .articleFirst .benefits p {
+    height: 50px;
+    text-align: left;
+  }
+  .articleFirst .betterResults {
+    order: 5;
+    right: 70px;
+    margin-top: 40px;
+    width: 460px;
+  }
+  .articleFirst .button {
+    order: 6;
+    width: 380px;
+    margin-top: 40px;
+    height: 72px;
+    padding: 20px;
+    left: 18px;
+  }
+  .articleFirst .uxAuditsArticle {
+    order: 7;
+    padding: 20px;
+    width: 420px;
+    margin-top: 150px;
+    right: 60px;
+    height: 270px;
+  }
+  .articleFirst .contactSvetNapojov {
+    order: 9;
+    padding: 30px 0 30px 85px;
+    right: 40px;
+    margin-top: 20px;
+  }
+  .articleFirst .uxTeamArticle {
+    order: 8;
+    padding: 20px;
+    width: 420px;
+    margin-top: 150px;
+    left: 46px;
+    height: 270px;
+  }
+  .articleFirst .contactAlainDelon {
+    order: 10;
+    padding: 30px 0 30px 85px;
+    left: 45px;
+    margin-top: 20px;
+  }
+
+  .articleSecond {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1244px;
+  }
+  .articleSecond > :nth-child(n) {
+    margin: 0;
+    padding: 0;
+    width: 440px;
+    position: relative;
+    max-width: none;
+  }
+  .articleSecond .firstH3 {
+    order: 1;
+    font-size: 48px;
+    line-height: 64px;
+    max-width: none;
+    width: 600px;
+    display: block;
+  }
+  .articleSecond .firstH3 span {
+    height: 70px;
+  }
+  .articleSecond .results {
+    order: 2;
+    margin-top: 120px;
+    width: 100%;
+    max-width: none;
+  }
+  .articleSecond .results div {
+    max-width: none;
+  }
+  .articleSecond .results h4 {
+    position: relative;
+    left: 10px;
+    top: 15px;
+  }
+  .articleSecond .results p {
+    width: 400px;
+    left: 10px;
+    top: 10px;
+  }
+  .articleSecond .results > :nth-child(odd) {
+    margin: 0 auto 20px auto;
+    width: 555px;
+    height: 130px;
+    right: 150px;
+    padding-right: 120px;
+    background: url("/graphics/arrowRight.png") right top 55px no-repeat;
+  }
+  .articleSecond .results > :nth-child(even) {
+    width: 570px;
+    margin: 0 auto 20px auto;
+    height: 130px;
+    left: 185px;
+    padding-left: 100px;
+    background: url("/graphics/arrowLeft.png") left top 65px no-repeat;
+  }
+  .articleSecond .results > :nth-child(4) {
+    background: none;
+  }
+  .articleSecond .secondH3 {
+    order: 3;
+    font-size: 48px;
+    line-height: 64px;
+    width: 950px;
+    padding-right: 350px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .articleSecond .secondH3 span {
+    height: 70px;
+  }
+  .articleSecond .mostImportantThings {
+    order: 5;
+    top: -50px;
+  }
+  .articleSecond .mostImportantThings p {
+    font-size: 18px;
+    line-height: 27px;
+    width: 500px;
+    height: 47px;
+    position: relative;
+    left: 40px;
+  }
+  .articleSecond p {
+    order: 4;
+    line-height: 40px;
+    font-size: 26px;
+    width: 300px;
+    position: relative;
+    right: 35px;
+    top: 40px;
+  }
+  .articleSecond .button {
+    order: 6;
+    position: relative;
+    right: 285px;
+    top: -100px;
+    min-width: none;
+    display: block;
+    padding: 23px 0;
+    width: 380px;
+  }
+
+  footer {
+    margin-top: 100px;
+    height: 721px;
+  }
+  footer p {
+    font-size: 48px;
+    line-height: 59px;
+    width: 600px;
+    margin-top: 140px;
+    margin-bottom: 120px;
+  }
+  footer div {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer div .telContact {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    margin-right: 40px;
+  }
+  footer div .emailContact {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+  }
+  footer .rieseniaLogo {
+    background-size: 275px;
+    width: 275px;
+  }
+  footer .rieseniaLogo:hover {
+    background-size: 275px;
+  }
+}
